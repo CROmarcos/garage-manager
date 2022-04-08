@@ -1,5 +1,6 @@
 import { Dispatch } from "react";
-import ICars from "../Interface";
+import ICars from "../interface/ICars";
+import ITires from "../interface/ITires";
 import { Action, ActionType } from './actions'
 
 export const addNewCar = (payload: ICars["cars"]) => {
@@ -29,7 +30,7 @@ export const sellTheCar = (payload: number) => {
     }
 }
 
-export const addTireSize = (payload: string) => {
+export const addTireSize = (payload: ITires) => {
     return (dispatch: Dispatch<Action>) => {
         dispatch({
             type: ActionType.ADD_TIRES,
@@ -38,7 +39,7 @@ export const addTireSize = (payload: string) => {
     }
 }
 
-export const removeTireSize = (payload: string) => {
+export const removeTireSize = (payload: ITires) => {
     return (dispatch: Dispatch<Action>) => {
         dispatch({
             type: ActionType.REMOVE_TIRES,

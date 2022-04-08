@@ -1,4 +1,5 @@
-import ICars from "../Interface";
+import ICars from "../interface/ICars";
+import ITires from "../interface/ITires";
 
 export enum ActionType {
     ADD = "addNewCar",
@@ -25,12 +26,12 @@ interface SellTheCarAction {
 
 interface AddTiresAction {
     type: ActionType.ADD_TIRES,
-    payload: string
+    payload: ITires
 }
 
 interface RemoveTiresAction {
     type: ActionType.REMOVE_TIRES,
-    payload: string
+    payload: ITires
 }
 
 export type Action = AddNewCarAction | UpdateTheCarAction | SellTheCarAction | AddTiresAction | RemoveTiresAction

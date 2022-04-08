@@ -1,6 +1,6 @@
 import ICars from "../Interface";
 
-enum ActionType {
+export enum ActionType {
     ADD = "addNewCar",
     UPDATE = "updateTheCar",
     SELL = "sellTheCar",
@@ -8,29 +8,29 @@ enum ActionType {
     REMOVE_TIRES = "removeTireSize"
 }
 
-interface AddNewCar {
+interface AddNewCarAction {
     type: ActionType.ADD,
     payload: ICars["cars"]
 }
 
-interface UpdateTheCar {
+interface UpdateTheCarAction {
     type: ActionType.UPDATE,
     payload: ICars["cars"]
 }
 
-interface SellTheCar {
+interface SellTheCarAction {
     type: ActionType.SELL,
     payload: number //ID of the car
 }
 
-interface AddTires {
+interface AddTiresAction {
     type: ActionType.ADD_TIRES,
     payload: string
 }
 
-interface RemoveTires {
-    type: ActionType.ADD_TIRES,
+interface RemoveTiresAction {
+    type: ActionType.REMOVE_TIRES,
     payload: string
 }
 
-export type Action = AddNewCar | UpdateTheCar | SellTheCar | AddTires | RemoveTires
+export type Action = AddNewCarAction | UpdateTheCarAction | SellTheCarAction | AddTiresAction | RemoveTiresAction

@@ -1,4 +1,4 @@
-enum fuelType {
+enum FuelType {
     gasoline = "GASOLINE",
     diesel = "DIESEL",
     electric = "ELECTRIC",
@@ -13,7 +13,7 @@ interface ICars {
         make: string,
         model: string,
         year: number,
-        fuel: fuelType,
+        fuel: FuelType,
         power: number,
         trailerHitch: boolean,
         tires: string[]

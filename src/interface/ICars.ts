@@ -1,4 +1,4 @@
-enum FuelType {
+export enum FuelType {
     gasoline = "GASOLINE",
     diesel = "DIESEL",
     electric = "ELECTRIC",

@@ -1,12 +1,24 @@
 .TableHolder{
     background-color: black;
-    width: 80%;
-    margin: auto;
     color: bisque;
+    margin-top: 40px;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    margin: 0;
 }
 
 th{
-    width: 250px;
+    width: 150px;
+}
+
+td{
+    width: 150px;
+    height: 100px;
 }
 
 tr {

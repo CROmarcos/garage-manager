@@ -2,6 +2,7 @@ import { useSelector } from "react-redux"
 import { State } from '../../state/reducer'
 import ICars from "../../interface/ICars"
 import './CarList.scss'
+import checkmark from '../../images/checkmark.svg'
 
 const CarList = () => {
     let carList: ICars["cars"][] = useSelector((state: State) => state.reducer)
@@ -25,7 +26,7 @@ const CarList = () => {
                             <td>{car.year}</td>
                             <td>{car.fuel}</td>
                             <td>{car.power} kW</td>
-                            <td>{car.trailerHitch ? "+" : "-"}</td>
+                            <td>{car.trailerHitch ? <div><img src="../../images/checkmark.svg" alt="yes" /></div> : "-"}</td>
                             <td>{car.tires.map(tire => <section>{tire}</section>)}</td>
                         </tr>)}
                 </tbody>

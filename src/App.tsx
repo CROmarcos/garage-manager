@@ -1,11 +1,15 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import GarageList from './pages/GarageList';
 import HomePage from './pages/HomePage';
-import store from './state/store';
 
 function App() {
   return (
     <div className="App">
-      <HomePage />
+      <Routes>
+        <Route path='/' element={HomePage()} />
+        <Route path='/mycars' element={GarageList()} />
+      </Routes>
     </div>
   );
 }

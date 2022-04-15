@@ -3,6 +3,7 @@ import { State } from '../../state/reducer'
 import ICars from "../../interface/ICars"
 import './CarList.scss'
 import checkmark from '../../images/checkmark.svg'
+import notchecked from '../../images/not.png'
 
 const CarList = () => {
     let carList: ICars["cars"][] = useSelector((state: State) => state.reducer)
@@ -26,7 +27,7 @@ const CarList = () => {
                             <td>{car.year}</td>
                             <td>{car.fuel}</td>
                             <td>{car.power} kW</td>
-                            <td>{car.trailerHitch ? <div><img src="../../images/checkmark.svg" alt="yes" /></div> : "-"}</td>
+                            <td><div className="icon"><img className="icon-image" src={car.trailerHitch ? checkmark : notchecked} alt="yes" /></div></td>
                             <td>{car.tires.map(tire => <section>{tire}</section>)}</td>
                         </tr>)}
                 </tbody>

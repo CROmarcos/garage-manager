@@ -1,8 +1,8 @@
-import PageTitle from "../components/PageTitle/PageTitle"
+import Home from "../components/Home/Home"
 
 const HomePage = () => {
     return (
-        <h1>Home Page</h1>
+        <Home/>
     )
 }
 

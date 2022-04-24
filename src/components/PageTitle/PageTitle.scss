@@ -4,17 +4,11 @@
     background: transparent;
     border-bottom: 0.5px solid bisque;
     display: flex;
-    justify-content: center;
     align-items: center;
 
     &-text {
+        width: 100%;
         margin: 0;
         color: bisque;
     }
-}
-
-.Action {
-    width: 150px;
-    float: right;
-    border: 1px solid bisque;
 }

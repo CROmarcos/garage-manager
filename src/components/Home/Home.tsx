@@ -1,15 +1,12 @@
 import './Home.scss'
-import carKey from '../../images/car_key.png'
-import { Link } from 'react-router-dom'
+import LinkToPage from '../LinkToPage/LinkToPage'
 
 const Home = () => {
     return (
         <div className='Home'>
-            <div className='ActionIcon'>
-                <Link to="/mycars">
-                    <img className='ActionIcon-image' src={carKey} alt='Open garage' />
-                    <label className='ActionIcon-description'>See my cars</label>
-                </Link>
+            <div className='Home-Navigation'>
+                <LinkToPage url='/mycars' alt='Open garage' description='Look at my cars' />
+                <LinkToPage url='/newcar' alt='Add new car' description='Add new car' />
             </div>
         </div>
     )

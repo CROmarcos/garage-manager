@@ -44,11 +44,15 @@
   }
 }
 
-.Page {
+.page {
   height: calc(100% - 100px);
   width: calc(100% - 100px);
   justify-content: center;
   background-color: black;
   border: 1px solid bisque;
   border-radius: 5pt;
+
+  &__body {
+    height: calc(100% - 100px);
+  }
 }

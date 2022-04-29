@@ -4,10 +4,12 @@ import PageTitle from "../components/PageTitle/PageTitle"
 
 const GarageList = () => {
     return (
-        <div className="Page">
+        <div className="page">
             <PageTitle title="My cars" />
-            <CarList />
-            <LinkToPage url='/newcar' alt='Add new car' description='Add new car' />
+            <div className="page__body">
+                <CarList />
+                <LinkToPage url='/newcar' alt='Add new car' description='Add new car' />
+            </div>
         </div>
     )
 }

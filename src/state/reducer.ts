@@ -8,7 +8,7 @@ const initialState: ICars["cars"][] = [
         make: "Mercedes-Benz",
         model: "W211",
         year: 2007,
-        fuel: FuelType.diesel,
+        fuel: FuelType.diesel.toString(),
         power: 125,
         trailerHitch: false,
         tires: [
@@ -22,7 +22,7 @@ const initialState: ICars["cars"][] = [
         make: "Toyota",
         model: "Avensis",
         year: 2004,
-        fuel: FuelType.diesel,
+        fuel: FuelType.diesel.toString(),
         power: 93,
         trailerHitch: true,
         tires: [
@@ -35,7 +35,7 @@ const initialState: ICars["cars"][] = [
         make: "Opel",
         model: "Astra",
         year: 2001,
-        fuel: FuelType.gasoline,
+        fuel: FuelType.gasoline.toString(),
         power: 74,
         trailerHitch: false,
         tires: [

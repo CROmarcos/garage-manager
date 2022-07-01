@@ -1,9 +1,9 @@
 export enum FuelType {
-    gasoline = "GASOLINE",
-    diesel = "DIESEL",
-    electric = "ELECTRIC",
-    hybridG = "GASOLINE HYBRID",
-    hybridD = "DIESEL HYBRID",
+    gasoline = "gasoline",
+    diesel = "diesel",
+    electric = "electric",
+    hybridG = "gasoline hybrid",
+    hybridD = "diesel hybrid",
     LPG = "LPG"
 }
 
@@ -13,7 +13,7 @@ interface ICars {
         make: string,
         model: string,
         year: number,
-        fuel: FuelType,
+        fuel: string,
         power: number,
         trailerHitch: boolean,
         tires: string[]

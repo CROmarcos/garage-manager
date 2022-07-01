@@ -29,17 +29,33 @@
             color: bisque;
             margin-bottom: 5px;
         }
-
-        input {
-            width: 250px;
-            height: 40px;
-            border: none;
-            border-radius: 5pt;
-        }
-
-        select {
-            width: 100px;
-            height: 40px;
-        }
     }
+}
+
+select {
+    width: 75px;
+    height: 40px;
+    text-align: center;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+#chooseFuel {
+    width: 150px;
+    font-size: 12pt;
+}
+
+input {
+    width: 250px;
+    height: 40px;
+    border: none;
+    border-radius: 5pt;
+    text-align: center;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+.bottom {
+    height: 40%;
+    width: 100%;
 }

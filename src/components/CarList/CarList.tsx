@@ -1,12 +1,17 @@
-import { useSelector } from "react-redux"
+import { useSelector, useDispatch } from "react-redux"
 import { State } from '../../state/reducer'
 import ICars from "../../interface/ICars"
 import './CarList.scss'
 import checkmark from '../../images/checkmark.svg'
 import notchecked from '../../images/not.png'
+import trashcan from '../../images/trashcan.png'
+import * as actionCreators from '../../state/actionCreators'
+import { bindActionCreators } from "redux"
 
 const CarList = () => {
     let carList: ICars["cars"][] = useSelector((state: State) => state.reducer)
+    const { sellTheCar } = bindActionCreators(actionCreators, useDispatch())
+
     return (
         <div className="TableHolder">
             <table>
@@ -22,7 +27,14 @@ const CarList = () => {
                 <tbody>
                     {carList.map(car =>
                         <tr key={car.id}>
-                            <td>{car.make}</td>
+                            <td>
+                                <section className="half">
+                                    {car.make}
+                                </section>
+                                <section className="half">
+                                    <button className="crud" onClick={() => sellTheCar(car.id)}><img className="crud--src" src={trashcan} alt="Delete car" /></button>
+                                </section>
+                            </td>
                             <td>{car.model}</td>
                             <td>{car.year}</td>
                             <td>{car.fuel}</td>

@@ -11,6 +11,7 @@ function App() {
         <Route path='/' element={HomePage()} />
         <Route path='/mycars' element={GarageList()} />
         <Route path='/newcar' element={NewCar()} />
+        <Route path='/edit/:id' element={NewCar()} />
       </Routes>
     </div>
   );

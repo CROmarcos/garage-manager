@@ -1,5 +1,5 @@
 import CarList from "../components/CarList/CarList"
-import LinkToPage from "../components/LinkToPage/LinkToPage"
+import LinkButton from "../components/LinkButton/LinkButton"
 import PageTitle from "../components/PageTitle/PageTitle"
 
 const GarageList = () => {
@@ -8,7 +8,7 @@ const GarageList = () => {
             <PageTitle title="My cars" />
             <div className="page__body">
                 <CarList />
-                <LinkToPage url='/newcar' alt='Add new car' description='Add new car' />
+                <LinkButton src='/newcar' alt='Add new car' description='Add new car' />
             </div>
         </div>
     )

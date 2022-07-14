@@ -39,7 +39,7 @@ const CarList = () => {
                             <td>{car.fuel}</td>
                             <td>{car.power} kW</td>
                             <td><div className="icon"><img className="icon-image" src={car.trailerHitch ? checkmark : notchecked} alt="yes" /></div></td>
-                            <td>{car.tires.map(tire => <section>{tire}</section>)}</td>
+                            <td>{car.tires?.map(tire => <section>{tire}</section>)}</td>
                             <td>
                                 <div className="modify__field">
                                     <section className="half">

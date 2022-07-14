@@ -57,10 +57,10 @@ const reducer = (state: ICars["cars"][] = initialState, action: Action) => {
             return state.map(car => car.id === action.payload.id ? action.payload : car)
         case ActionType.SELL:
             return state.filter(car => car.id !== action.payload)
-        case ActionType.ADD_TIRES:
-            return state.map(car => car.id === action.payload.car ? car.tires.push(action.payload.tire) : car)
-        case ActionType.REMOVE_TIRES:
-            return state.map(car => car.id === action.payload.car ? car.tires.filter(tire => tire !== action.payload.tire) : car)
+        // case ActionType.ADD_TIRES:
+        //     return state.map(car => car.id === action.payload.car ? car.tires.push(action.payload.tire) : car)
+        // case ActionType.REMOVE_TIRES:
+        //     return state.map(car => car.id === action.payload.car ? car.tires.filter(tire => tire !== action.payload.tire) : car)
         default:
             return state
     }

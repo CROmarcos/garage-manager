@@ -12,10 +12,11 @@ import trashcan from '../../images/trashcan.png'
 import edit from '../../images/edit.png'
 
 import './CarList.scss'
+import TireInput from "../TireInput/TireInput"
 
 const CarList = () => {
     let carList: ICars["cars"][] = useSelector((state: State) => state.reducer)
-    const { sellTheCar } = bindActionCreators(actionCreators, useDispatch())
+    const { sellTheCar, setTireSize } = bindActionCreators(actionCreators, useDispatch())
 
     return (
         <div className="TableHolder">
@@ -39,7 +40,23 @@ const CarList = () => {
                             <td>{car.fuel}</td>
                             <td>{car.power} kW</td>
                             <td><div className="icon"><img className="icon-image" src={car.trailerHitch ? checkmark : notchecked} alt="yes" /></div></td>
-                            <td>{car.tires?.map(tire => <section>{tire}</section>)}</td>
+                            <td className="tires-field">
+                                <section id={`input-${car.id}`} className="tire-input">
+                                    <TireInput car={car} />
+                                </section>
+                                {car.tires?.map(tire => <section>
+                                    {tire}
+                                    <button className="tires-btn tires-btn--remove" onClick={() => {
+                                        let tiresField = car.tires
+                                        tiresField = tiresField.filter(x => x !== tire)
+                                        setTireSize({ car: car.id, tires: tiresField })
+                                    }}>X</button>
+                                </section>)}
+                                <button className="tires-btn" onClick={() => {
+                                    let inputForm = document.getElementById(`input-${car.id}`)
+                                    if (inputForm) inputForm.style.display = "flex"
+                                }}>Add tire size</button>
+                            </td>
                             <td>
                                 <div className="modify__field">
                                     <section className="half">

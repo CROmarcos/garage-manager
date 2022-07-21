@@ -51,6 +51,34 @@
     }
 }
 
+.tires-field {
+    position: relative;
+}
+
+.tires-btn {
+    border: none;
+    background: transparent;
+    color: rgb(112, 144, 231);
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-style: italic;
+    font-weight: bold;
+
+    &--remove {
+        margin: 0;
+        margin-left: 10px;
+        font-style: normal;
+    }
+}
+
+.tire-input {
+    display: none;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    z-index: 1;
+}
+
 .modify {
     font-style: italic;
 
@@ -60,6 +88,12 @@
         display: flex;
         flex-direction: row;
     }
+}
+
+.bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 table {
@@ -76,7 +110,8 @@ td {
 }
 
 tr {
-    height: 100px;
+    // height: 100px;
+    height: fit-content;
 }
 
 thead {

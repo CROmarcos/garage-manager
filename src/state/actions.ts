@@ -5,8 +5,7 @@ export enum ActionType {
     ADD = "addNewCar",
     UPDATE = "updateTheCar",
     SELL = "sellTheCar",
-    ADD_TIRES = "addTireSize",
-    REMOVE_TIRES = "removeTireSize"
+    SET_TIRES = "setTireSize"
 }
 
 interface AddNewCarAction {
@@ -24,14 +23,9 @@ interface SellTheCarAction {
     payload: number //ID of the car
 }
 
-interface AddTiresAction {
-    type: ActionType.ADD_TIRES,
+interface SetTiresAction {
+    type: ActionType.SET_TIRES,
     payload: ITires
 }
 
-interface RemoveTiresAction {
-    type: ActionType.REMOVE_TIRES,
-    payload: ITires
-}
-
-export type Action = AddNewCarAction | UpdateTheCarAction | SellTheCarAction | AddTiresAction | RemoveTiresAction
+export type Action = AddNewCarAction | UpdateTheCarAction | SellTheCarAction | SetTiresAction

@@ -1,6 +1,6 @@
 interface ITires {
     car: number,
-    tire: string
+    tires: string[]
 }
 
 export default ITires

@@ -30,19 +30,10 @@ export const sellTheCar = (payload: number) => {
     }
 }
 
-export const addTireSize = (payload: ITires) => {
+export const setTireSize = (payload: ITires) => {
     return (dispatch: Dispatch<Action>) => {
         dispatch({
-            type: ActionType.ADD_TIRES,
-            payload
-        })
-    }
-}
-
-export const removeTireSize = (payload: ITires) => {
-    return (dispatch: Dispatch<Action>) => {
-        dispatch({
-            type: ActionType.REMOVE_TIRES,
+            type: ActionType.SET_TIRES,
             payload
         })
     }

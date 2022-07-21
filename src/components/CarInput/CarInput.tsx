@@ -105,7 +105,7 @@ const CarInput = () => {
                     <div className="input__row">
                         <div className="input__row--field">
                             <div className="input__row--label">Year</div>
-                            <select id="chooseYear" onChange={selectYear} value={input.year}>
+                            <select id="chooseYear" className="input--select" onChange={selectYear} value={input.year}>
                                 {years.map(
                                     yr => <option key={yr}>{yr}</option>
                                 )}
@@ -115,7 +115,7 @@ const CarInput = () => {
                     <div className="input__row">
                         <div className="input__row--field">
                             <div className="input__row--label">Fuel type</div>
-                            <select className="fuel" id="chooseFuel" onChange={selectFuel} value={input.fuel}>
+                            <select className="input--select fuel" id="chooseFuel" onChange={selectFuel} value={input.fuel}>
                                 {(Object.values(FuelType) as Array<keyof typeof FuelType>).map(fuelType => <option key={fuelType}>{fuelType}</option>)}
                             </select>
                         </div>

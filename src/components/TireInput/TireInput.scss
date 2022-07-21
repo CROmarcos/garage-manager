@@ -1,0 +1,70 @@
+.tire-form {
+    width: 225px;
+    height: fit-content;
+    font-size: 8pt;
+    font-weight: bold;
+    color: black;
+    background-color: bisque;
+    border: 2pt solid darkred;
+    border-radius: 2%;
+
+    &__title {
+        width: 100%;
+        height: 30px;
+        font-size: 12pt;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &--value {
+            margin: 0;
+        }
+    }
+
+    &__set-values {
+        width: 100%;
+        height: 50px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    &__set-type {
+        width: 100%;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__actions {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-bottom: 5px;
+    }
+}
+
+.zr-check {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+
+.tire-set {
+    width: 40px;
+    height: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.width {
+    width: 50px;
+}
+
+.complete-form {
+    width: 70px;
+    height: 25px;
+}

@@ -8,9 +8,9 @@ import './TireInput.scss'
 const TireInput = ({ car }: { car: ICars["cars"] }) => {
     const { setTireSize } = bindActionCreators(actionCreators, useDispatch())
 
-    const [selectedWidth, setWidth] = useState('195')
-    const [selectedHeight, setHeight] = useState('65')
-    const [selectedInch, setInch] = useState('15')
+    const [selectedWidth, setSelectedWidth] = useState('195')
+    const [selectedHeight, setSelectedHeight] = useState('65')
+    const [selectedInch, setSelectedInch] = useState('15')
     const [performance, setPerformance] = useState("R")
 
     let width: string[] = []
@@ -29,15 +29,15 @@ const TireInput = ({ car }: { car: ICars["cars"] }) => {
     }
 
     const selectWidth = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        setWidth(e.target.value)
+        setSelectedWidth(e.target.value)
     }
 
     const selectHeight = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        setHeight(e.target.value)
+        setSelectedHeight(e.target.value)
     }
 
     const selectInch = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        setInch(e.target.value)
+        setSelectedInch(e.target.value)
     }
 
     const selectPerformance = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -48,9 +48,9 @@ const TireInput = ({ car }: { car: ICars["cars"] }) => {
         let inputForm = document.getElementById(`input-${car.id}`)
         if (inputForm) {
             inputForm.style.display = "none"
-            setWidth('195')
-            setHeight('65')
-            setInch('15')
+            setSelectedWidth('195')
+            setSelectedHeight('65')
+            setSelectedInch('15')
             setPerformance("R")
         }
     }
@@ -72,23 +72,23 @@ const TireInput = ({ car }: { car: ICars["cars"] }) => {
                     <select className='tire-set width' onChange={selectWidth} value={selectedWidth}>
                         {width.map(x => <option key={x}>{x}</option>)}
                     </select>
-                    <label>Width</label>
+                    <label>{" "}Width</label>
                 </div>
                 <div>
                     <select className='tire-set' onChange={selectHeight} value={selectedHeight}>
                         {height.map(x => <option key={x}>{x}</option>)}
                     </select>
-                    <label>Height</label>
+                    <label>{" "}Height</label>
                 </div>
                 <div>
                     <select className='tire-set' onChange={selectInch} value={selectedInch}>
                         {inch.map(x => <option key={x}>{x}</option>)}
                     </select>
-                    <label>Inches</label>
+                    <label>{" "}Inches</label>
                 </div>
             </section>
             <section className='tire-form__set-type'>
-                <input type="checkbox" className='zr-check' onChange={selectPerformance} /><label>ZR (high-speed tires)</label>
+                <input type="checkbox" className='zr-check' onChange={selectPerformance} /><label>{" "}ZR (high-speed tires)</label>
             </section>
             <section className='tire-form__actions'>
                 <button className='complete-form' onClick={saveTire}>Save</button>

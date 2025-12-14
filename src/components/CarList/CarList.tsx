@@ -42,7 +42,7 @@ const CarList = () => {
                             <td><div className="icon"><img className="icon-image" src={car.trailerHitch ? checkmark : notchecked} alt="yes" /></div></td>
                             <td className="tires-field">
                                 <section id={`input-${car.id}`} className="tire-input">
-                                    <TireInput car={car} />
+                                    <TireInput key={car.id} car={car} />
                                 </section>
                                 {car.tires?.map(tire => <section>
                                     {tire}

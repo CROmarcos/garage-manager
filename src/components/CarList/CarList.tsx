@@ -22,14 +22,16 @@ const CarList = () => {
         <div className="TableHolder">
             <table>
                 <thead>
-                    <th>Make</th>
-                    <th>Model</th>
-                    <th>Year</th>
-                    <th>Fuel</th>
-                    <th>Engine power</th>
-                    <th>Trailer hitch</th>
-                    <th>Tire size</th>
-                    <th className="modify">Modify</th>
+                    <tr>
+                        <th>Make</th>
+                        <th>Model</th>
+                        <th>Year</th>
+                        <th>Fuel</th>
+                        <th>Engine power</th>
+                        <th>Trailer hitch</th>
+                        <th>Tire size</th>
+                        <th className="modify">Modify</th>
+                    </tr>
                 </thead>
                 <tbody>
                     {carList.map(car =>
@@ -44,7 +46,7 @@ const CarList = () => {
                                 <section id={`input-${car.id}`} className="tire-input">
                                     <TireInput key={car.id} car={car} />
                                 </section>
-                                {car.tires?.map(tire => <section>
+                                {car.tires?.map(tire => <section key={tire}>
                                     {tire}
                                     <button className="tires-btn tires-btn--remove" onClick={() => {
                                         let tiresField = car.tires
